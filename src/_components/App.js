@@ -1,23 +1,19 @@
 import React from 'react';
-import logo from '../logo.svg';
-import '../_styles/App.css';
+import { Box, Grommet } from 'grommet';
+
+import PageHeader from './routing/PageHeader';
+import Routing from './routing';
+import { themes } from '../utilities';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hey yo!!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grommet theme={themes.awsmcolor}>
+      <PageHeader />
+
+      <Box pad="medium">
+        <Routing />
+      </Box>
+    </Grommet>
   );
 }
 

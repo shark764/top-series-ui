@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './_styles/index.css';
+import { BrowserRouter } from 'react-router-dom';
+// import './_styles/index.css';
 import App from './_components/App';
 import reportWebVitals from './reportWebVitals';
+import ApolloClientProvider from './_providers/apolloProvider/ApolloClientProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ApolloClientProvider>
+        <App />
+      </ApolloClientProvider>
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

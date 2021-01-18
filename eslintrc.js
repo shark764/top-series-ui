@@ -18,6 +18,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'max-len': ['warn', { code: 120 }],
     'import/no-named-as-default': 'warn',
+    'import/prefer-default-export': 'warn',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/no-deprecated': 'warn',
     'react/prop-types': 'warn',
